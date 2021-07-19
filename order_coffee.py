@@ -1,6 +1,6 @@
 import requests
 import PySimpleGUI as sg
-import pyautogui as pgui  # 欲しいFontがあったため
+import pyautogui   # 欲しいFontがあったため
 import csv
 
 # 定数
@@ -66,7 +66,7 @@ def send_line(notification_message):
     data = {'message': f'message: {notification_message}'}
     requests.post(API_URL, headers = headers, data=data)
 
-# お気に入りのデザインテーマ
+# デザインテーマの設定
 sg.theme('DarkAmber')
 
 # ウィンドウ構成
@@ -96,6 +96,7 @@ layout = [ [sg.Text('Name',font=('Times New Roman',14)),
            [sg.Button('ORDER', key='submit', font=('Times New Roman',14)),
             sg.Button('CANCEL', key='cancel', font=('Times New Roman',14))]        
          ]
+
 window = sg.Window('Coffee order', layout)
 
 # イベントループ
@@ -141,7 +142,5 @@ while True:
     
     if event == 'cancel':
         delete_elements()
-        
-
 
 window.close()
