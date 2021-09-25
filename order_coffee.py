@@ -3,7 +3,6 @@ import PySimpleGUI as sg
 import pyautogui   # 欲しいFontがあったため
 import csv
 
-# 定数
 ORDER_NAME = '-------------------------------------------'
 BEVERAGE_LINE = '----------------------'
 TEMPERATURE_LINE = '--------'
